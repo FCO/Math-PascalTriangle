@@ -3,3 +3,10 @@ perl6:
   - latest
   - 2015.07
   - 2015.04
+install:
+  - rakudobrew build-panda
+  - panda installdeps .
+  - panda install Test::META
+script:
+  - PERL6_TEST_META=1 PERL6LIB=$PWD/lib prove -e perl6 -r t/
+sudo: false
