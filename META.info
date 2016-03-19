@@ -8,6 +8,10 @@
         "Math::PascalTriangle" : "lib/Math/PascalTriangle.pm6"
     },
     "depends" : [ ],
+    "test-depends" : [
+        "Test",
+        "Test::META"
+   ],
     "resources" : [ ],
     "source-url" : "git://github.com/FCO/Math-PascalTriangle.git"
 }
