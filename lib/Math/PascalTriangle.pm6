@@ -1,4 +1,4 @@
-class PascalTriangle {
+class Math::PascalTriangle {
 	my $triangle = [[1]];
 
 	method !generate-line(Int \index-nu where * > 0) {
@@ -15,8 +15,20 @@ class PascalTriangle {
 		}
 	}
 
-	method get(Int :$line!, Int :$col! where $line >= *) {
-		self!generate-line($line) if not $triangle[$line]:exists;
+	proto method get(Int :$line!, Int :$col!) {
+		{*}
+	}
+
+	multi method get(Int :$line!, Int :$col! where * == 0) {1}
+
+	multi method get(Int :$line!, Int :$col! where $line == *) {1}
+
+	multi method get(Int :$line!, Int :$col! where $line > *) {
+		self!generate-line($line) if $line >= $.cached-lines;
 		$triangle[$line; $col]
+	}
+
+	method cached-lines {
+		$triangle.elems
 	}
 }
