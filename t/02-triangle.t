@@ -5,6 +5,8 @@ use lib 'lib';
 
 use Test;
 
+plan 17;
+
 use-ok "Math::PascalTriangle";
 use Math::PascalTriangle;
 
