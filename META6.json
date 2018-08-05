@@ -14,5 +14,5 @@
         "Test::META"
    ],
     "resources"     : [ ],
-    "source-url"    : "git://github.com/FCO/Math-PascalTriangle.git"
+    "source-url"    : "https://github.com/FCO/Math-PascalTriangle.git"
 }
