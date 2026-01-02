@@ -1,3 +1,4 @@
 *.swp
 Makefile
+.precomp
 lib/.precomp
